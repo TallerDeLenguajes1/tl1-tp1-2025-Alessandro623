@@ -1,5 +1,5 @@
 #include <stdio.h>
-void invertir(int a, int b);
+void orden(int a, int b);
 
 
 
@@ -10,23 +10,25 @@ int main(){
     scanf("%d", &a);
     int b;
     scanf("%d", &b);
-    invertir(a,b);
+    orden(a,b);
     
 }
 
 
-void invertir(int a, int b){
-    
+void orden(int a, int b){
+    int guardar = 0;
     printf("valor de a = %d\n", a);
     printf("valor de b = %d\n", b);
 
-    printf("invirtiendo...\n");
-    int guardar = 0;
-    guardar = a;
-    a = b;
-    b = guardar;
-
-    printf("nuevo valor de a = %d\n", a);
-    printf("nuevo valor de b = %d", b);
+    if (a > b)
+    {
+        guardar = a;
+        a = b;
+        b = guardar;
+        printf("nuevos valores de menor a mayor...\n");
+        printf("valor de a = %d\n", a);
+        printf("valor de b = %d\n", b);
+    }
+    
 
 }
