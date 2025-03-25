@@ -1,22 +1,32 @@
 #include <stdio.h>
-void devolverCuadrado(int numero);
+void invertir(int a, int b);
+
 
 
 int main(){
 
-    printf("ingrese un numero para calcular su cuadrado\n");
-    int numero;
-    scanf("%d", &numero);
-    devolverCuadrado(numero);
+    printf("ingrese 2 numeros\n");
+    int a;
+    scanf("%d", &a);
+    int b;
+    scanf("%d", &b);
+    invertir(a,b);
     
 }
 
 
-void devolverCuadrado(int numero){
+void invertir(int a, int b){
+    
+    printf("valor de a = %d\n", a);
+    printf("valor de b = %d\n", b);
 
-    int numeroD = 0;
-    numeroD= numero * numero;
+    printf("invirtiendo...\n");
+    int guardar = 0;
+    guardar = a;
+    a = b;
+    b = guardar;
 
-    printf("El cuadrado de %d es = %d", numero, numeroD);
+    printf("nuevo valor de a = %d\n", a);
+    printf("nuevo valor de b = %d", b);
 
 }
